@@ -59,7 +59,7 @@ processed_data = []
 for restaurant in data:
     processed_restaurant = {
         "name": restaurant["Name"],
-        "cuisine": process_cuisine(restaurant["Cuisine"]),
+        "cuisine": restaurant["Cuisine"],
         "diet": process_dietary(restaurant["Dietary"]),
         "payment": process_payment(restaurant["Payment"]),
         "rating": restaurant["Rating"],

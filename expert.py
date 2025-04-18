@@ -138,7 +138,7 @@ def list_to_prolog(lst):
 
 call(retractall(restaurant))
 for _, row in restaurant_df.iterrows():
-    fact = f'restaurant("{row["name"]}", {row["price"]}, {row["cuisine"]}, {row["wait"]}, {list_to_prolog(row["diet"])}, {row["distance"]}, {row["rating"]}, {row["num_ratings"]}, {list_to_prolog(row["payment"])})'
+    fact = f'restaurant("{row["name"]}", {row["price"]}, "{row["cuisine"]}", {row["wait"]}, {list_to_prolog(row["diet"])}, {row["distance"]}, {row["rating"]}, {row["num_ratings"]}, {list_to_prolog(row["payment"])})'
     prolog.assertz(fact)
 
 call(retractall(known2))
